@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button, Alert, ActivityIndicator } from 'react-native';
 
 import * as Location from 'expo-location';
@@ -10,6 +10,15 @@ import MapPreview from './MapPreview';
 const LocationPicker = (props) => {
     const [pickedLocation, setPickedLocation] = useState();
     const [isFetching, setIsFetching] = useState(false);
+
+    const mapPickedLocation = props.navigation.getParam('pickedLocation');
+    useEffect(() => {
+        if (mapPickedLocation) {
+            // console.log(mapPickedLocation);
+            setPickedLocation(mapPickedLocation);
+        }
+    }, [mapPickedLocation]);
+
     const verifyPermissions = async () => {
         const result = await Permissions.askAsync(Permissions.LOCATION);
         // Above gives a warning, see https://stackoverflow.com/questions/68668152/react-native-expo-permission-deprecated-what-to-use-now

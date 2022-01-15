@@ -12,6 +12,7 @@ const MapPreview = (props) => {
         imagePreviewUrl = 'https://i.stack.imgur.com/HILmr.png';
         // imagePreviewUrl = 'https://www.xda-developers.com/files/2019/06/google-maps-india.jpg';
     }
+    console.log()
     return (
         <TouchableOpacity onPress={props.onPress} style={{ ...styles.mapPreview, ...props.style }}>
             {props.location ? (

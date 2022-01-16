@@ -9,7 +9,9 @@ const ImgPicker = (props) => {
     const [pickedImage, setPickedImage] = useState();
 
     const verifyPermissions = async () => {
-        const result = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+        const result = await Permissions.askAsync(
+            Permissions.CAMERA_ROLL,
+            Permissions.CAMERA);
         // Above gives a warning, see https://stackoverflow.com/questions/68668152/react-native-expo-permission-deprecated-what-to-use-now
         // const result = await Camera.requestPermissionsAsync(); 
         if (result.status !== 'granted') {

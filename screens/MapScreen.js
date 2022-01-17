@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Platform } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
-import { Colors } from '../constants/Colors';
+import Colors from '../constants/Colors';
 
 const MapScreen = (props) => {
     const initialLocation = props.navigation.getParam('initialLocation');

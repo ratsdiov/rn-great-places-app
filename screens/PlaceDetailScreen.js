@@ -68,15 +68,16 @@ const styles = StyleSheet.create({
         borderRadius: 10
     },
     addressContainer: {
-        padding: 20
+        padding: 20,
+        width: '100%'  // RKD / KBD hack to force width on mapPreview
     },
     address: {
         color: Colors.primary,
         textAlign: 'center'
     },
     mapPreview: {
-        // width: '100%', // KBD FIXME - this does not work, not sure why
-        width: 300,
+        width: '100%', // KBD FIXME - this does not work, not sure why
+        // width: 300,
         maxWidth: 350,
         height: 300,
         borderBottomLeftRadius: 10,

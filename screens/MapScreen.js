@@ -5,7 +5,7 @@ import { Colors } from '../constants/Colors';
 
 const MapScreen = (props) => {
     const initialLocation = props.navigation.getParam('initialLocation');
-    const reaedonly = props.navigation.getParam('readonly');
+    const readonly = props.navigation.getParam('readonly');
 
 
     const [selectedLocation, setSelectedLocation] = useState(initialLocation);
